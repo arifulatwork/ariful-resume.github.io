@@ -46,3 +46,34 @@ window.onclick = function(event) {
         portfolioModal.style.display = "none";
     }
 }
+
+
+// -----------------for my book--------------------
+
+
+// Get the books modal
+var booksModal = document.getElementById("books-modal");
+
+// Get the link for the books
+var booksLink = document.getElementById("books-link");
+
+// When the user clicks the books link, open the books modal
+booksLink.onclick = function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    booksModal.style.display = "block";
+}
+
+// Get the <span> element that closes the books modal
+var booksCloseBtn = booksModal.querySelector(".close");
+
+// When the user clicks on <span> (x) in the books modal, close the modal
+booksCloseBtn.onclick = function() {
+    booksModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the books modal, close it
+window.onclick = function(event) {
+    if (event.target == booksModal) {
+        booksModal.style.display = "none";
+    }
+}
