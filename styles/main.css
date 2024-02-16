@@ -201,6 +201,7 @@ li{
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 60px;
   }
   
   /* Style for the modal content */
@@ -209,9 +210,10 @@ li{
     background-color: #141414;
     margin: 15% auto;
     padding: 20px;
+    margin: auto;    
     border-radius: 20px;
-    width: 70%; /* Adjust the width here */
-    max-width: 400px; /* Adjust the maximum width here */
+    width: 80%;
+    max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
