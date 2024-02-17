@@ -77,3 +77,35 @@ window.onclick = function(event) {
         booksModal.style.display = "none";
     }
 }
+
+
+
+// Welcome Image
+
+document.addEventListener("DOMContentLoaded", function() {
+    var visitedProfile = localStorage.getItem("visitedProfile");
+
+    // If it's the user's first visit, show the image modal
+    if (!visitedProfile) {
+        var imageModal = document.getElementById("image-modal");
+        imageModal.style.display = "block";
+        
+        // Set the flag indicating the user has visited the profile
+        localStorage.setItem("visitedProfile", "true");
+    }
+
+    // Close the modal when the close button is clicked
+    var closeBtn = document.querySelector("#image-modal .close");
+    closeBtn.addEventListener("click", function() {
+        imageModal.style.display = "none";
+    });
+
+    // Close the modal when clicking outside the modal
+    window.addEventListener("click", function(event) {
+        if (event.target == imageModal) {
+            imageModal.style.display = "none";
+        }
+    });
+});
+
+// Welcome Image End
